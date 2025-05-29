@@ -1,0 +1,11 @@
+﻿  kaisa.c
+  test.c
+  正在生成代码...
+C:\Users\kiana\source\repos\kaisa\kaisa\test.c(25,10): warning C4477: “scanf”: 格式字符串“%[^\n]”需要类型“char *”的参数，但可变参数 1 拥有了类型“int *”
+C:\Users\kiana\source\repos\kaisa\kaisa\test.c(28,10): warning C4133: “函数”: 从“int [500]”到“char *”的类型不兼容
+C:\Users\kiana\source\repos\kaisa\kaisa\test.c(29,11): warning C4477: “printf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 1 拥有了类型“int *”
+C:\Users\kiana\source\repos\kaisa\kaisa\test.c(33,10): warning C4477: “scanf”: 格式字符串“%[^\n]”需要类型“char *”的参数，但可变参数 1 拥有了类型“int *”
+C:\Users\kiana\source\repos\kaisa\kaisa\test.c(36,10): warning C4133: “函数”: 从“int [500]”到“char *”的类型不兼容
+C:\Users\kiana\source\repos\kaisa\kaisa\test.c(37,11): warning C4477: “printf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 1 拥有了类型“int *”
+C:\Users\kiana\source\repos\kaisa\kaisa\kaisa.c(25,1): warning C4716: “kaisa”: 必须返回一个值
+  kaisa.vcxproj -> C:\Users\kiana\source\repos\kaisa\x64\Debug\kaisa.exe

@@ -1,0 +1,4 @@
+﻿  源.cpp
+C:\Users\kiana\source\repos\kim long\kim long\源.cpp(123,34): warning C4244: “参数”: 从“double”转换到“DWORD”，可能丢失数据
+C:\Users\kiana\source\repos\kim long\kim long\源.cpp(123,21): warning C4244: “参数”: 从“double”转换到“DWORD”，可能丢失数据
+  kim long.vcxproj -> C:\Users\kiana\source\repos\kim long\x64\Debug\kim long.exe

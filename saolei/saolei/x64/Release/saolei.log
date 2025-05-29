@@ -1,0 +1,8 @@
+﻿  test.c
+C:\Users\kiana\source\repos\saolei\saolei\test.c(23,10): warning C4048: “char (*)[9]”和“char [11][11]”数组的下标不同
+  正在生成代码
+  0 of 16 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  saolei.vcxproj -> C:\Users\kiana\source\repos\saolei\x64\Release\saolei.exe

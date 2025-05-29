@@ -1,0 +1,13 @@
+﻿  test,.c
+C:\Users\kiana\source\repos\zhangshudigui\zhangshudigui\test,.c(13,16): warning C4473: “scanf”: 没有为格式字符串传递足够的参数
+      C:\Users\kiana\source\repos\zhangshudigui\zhangshudigui\test,.c(13,16):
+      占位符和其参数预计 1 可变参数，但提供的却是 0 参数
+      C:\Users\kiana\source\repos\zhangshudigui\zhangshudigui\test,.c(13,16):
+      缺失的可变参数 1 为格式字符串“%d”所需
+  
+  正在生成代码
+  1 of 8 functions (12.5%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  zhangshudigui.vcxproj -> C:\Users\kiana\source\repos\zhangshudigui\x64\Release\zhangshudigui.exe

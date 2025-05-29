@@ -1,0 +1,7 @@
+G:\C#excrises\Schur\Schur\bin\Debug\Schur.exe.config
+G:\C#excrises\Schur\Schur\bin\Debug\Schur.exe
+G:\C#excrises\Schur\Schur\bin\Debug\Schur.pdb
+G:\C#excrises\Schur\Schur\obj\Debug\Schur.csproj.AssemblyReference.cache
+G:\C#excrises\Schur\Schur\obj\Debug\Schur.csproj.CoreCompileInputs.cache
+G:\C#excrises\Schur\Schur\obj\Debug\Schur.exe
+G:\C#excrises\Schur\Schur\obj\Debug\Schur.pdb

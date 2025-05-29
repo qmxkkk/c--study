@@ -1,0 +1,13 @@
+﻿  game.c
+  test.c
+  正在生成代码...
+C:\Users\kiana\source\repos\sanziqi\sanziqi\test.c(27,12): warning C4133: “函数”: 从“int [3][3]”到“char (*)[3]”的类型不兼容
+C:\Users\kiana\source\repos\sanziqi\sanziqi\test.c(31,15): warning C4133: “函数”: 从“int [3][3]”到“char (*)[3]”的类型不兼容
+C:\Users\kiana\source\repos\sanziqi\sanziqi\test.c(38,22): warning C4133: “函数”: 从“int [3][3]”到“char (*)[3]”的类型不兼容
+C:\Users\kiana\source\repos\sanziqi\sanziqi\test.c(39,16): warning C4133: “函数”: 从“int [3][3]”到“char (*)[3]”的类型不兼容
+C:\Users\kiana\source\repos\sanziqi\sanziqi\test.c(44,23): warning C4133: “函数”: 从“int [3][3]”到“char (*)[3]”的类型不兼容
+C:\Users\kiana\source\repos\sanziqi\sanziqi\test.c(44,30): warning C4048: “char (*)[3]”和“char [4][2]”数组的下标不同
+C:\Users\kiana\source\repos\sanziqi\sanziqi\test.c(49,22): warning C4133: “函数”: 从“int [3][3]”到“char (*)[3]”的类型不兼容
+C:\Users\kiana\source\repos\sanziqi\sanziqi\test.c(50,16): warning C4133: “函数”: 从“int [3][3]”到“char (*)[3]”的类型不兼容
+C:\Users\kiana\source\repos\sanziqi\sanziqi\game.c(516,1): warning C4715: “WriteBackG”: 不是所有的控件路径都返回值
+  sanziqi.vcxproj -> C:\Users\kiana\source\repos\sanziqi\x64\Debug\sanziqi.exe

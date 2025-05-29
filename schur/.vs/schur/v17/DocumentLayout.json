@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kiana\\source\\repos\\schur\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AA982F93-33A5-45EA-93CF-ACDD98938AC8}|schur\\schur.vcxproj|C:\\Users\\kiana\\source\\repos\\schur\\schur\\kimi.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AA982F93-33A5-45EA-93CF-ACDD98938AC8}|schur\\schur.vcxproj|solutionrelative:schur\\kimi.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA982F93-33A5-45EA-93CF-ACDD98938AC8}|schur\\schur.vcxproj|C:\\Users\\kiana\\source\\repos\\schur\\schur\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AA982F93-33A5-45EA-93CF-ACDD98938AC8}|schur\\schur.vcxproj|solutionrelative:schur\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "kimi.c",
+              "DocumentMoniker": "C:\\Users\\kiana\\source\\repos\\schur\\schur\\kimi.c",
+              "RelativeDocumentMoniker": "schur\\kimi.c",
+              "ToolTip": "C:\\Users\\kiana\\source\\repos\\schur\\schur\\kimi.c",
+              "RelativeToolTip": "schur\\kimi.c",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAA0AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-10-15T14:58:51.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "test.c",
+              "DocumentMoniker": "C:\\Users\\kiana\\source\\repos\\schur\\schur\\test.c",
+              "RelativeDocumentMoniker": "schur\\test.c",
+              "ToolTip": "C:\\Users\\kiana\\source\\repos\\schur\\schur\\test.c",
+              "RelativeToolTip": "schur\\test.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-10-15T11:59:51.983Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
