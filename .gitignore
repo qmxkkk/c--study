@@ -1,0 +1,8 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/longest palindromic substring
+/regular expression matching
+/the longest substring number/.vs/the longest substring number/v17
+/two lists are combined to find median
