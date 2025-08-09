@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\source\\repos\\base4 practice\\",
+  "WorkspaceRootPath": "D:\\source\\repos\\c -study\\base4 practice\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{21397E5F-70B8-4176-946B-E2AB25CCF4ED}|base4 practice\\base4 practice.vcxproj|D:\\source\\repos\\base4 practice\\base4 practice\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{21397E5F-70B8-4176-946B-E2AB25CCF4ED}|base4 practice\\base4 practice.vcxproj|D:\\source\\repos\\c -study\\base4 practice\\base4 practice\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{21397E5F-70B8-4176-946B-E2AB25CCF4ED}|base4 practice\\base4 practice.vcxproj|solutionrelative:base4 practice\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -24,11 +24,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "main.c",
-              "DocumentMoniker": "D:\\source\\repos\\base4 practice\\base4 practice\\main.c",
+              "DocumentMoniker": "D:\\source\\repos\\c -study\\base4 practice\\base4 practice\\main.c",
               "RelativeDocumentMoniker": "base4 practice\\main.c",
-              "ToolTip": "D:\\source\\repos\\base4 practice\\base4 practice\\main.c",
+              "ToolTip": "D:\\source\\repos\\c -study\\base4 practice\\base4 practice\\main.c",
               "RelativeToolTip": "base4 practice\\main.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAH0AAAAAAAAAAADwv7IAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-07-23T12:07:02.176Z",
               "EditorCaption": ""

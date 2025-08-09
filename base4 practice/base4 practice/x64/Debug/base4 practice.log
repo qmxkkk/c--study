@@ -1,4 +1,5 @@
 ﻿  main.c
-D:\source\repos\base4 practice\base4 practice\main.c(137,62): warning C4090: “函数”: 不同的“const”限定符
-D:\source\repos\base4 practice\base4 practice\main.c(57,1): warning C4172: 返回局部变量的地址或临时 : y
-  base4 practice.vcxproj -> D:\source\repos\base4 practice\x64\Debug\base4 practice.exe
+D:\source\repos\c -study\base4 practice\base4 practice\main.c(137,62): warning C4090: “函数”: 不同的“const”限定符
+D:\source\repos\c -study\base4 practice\base4 practice\main.c(57,1): warning C4172: 返回局部变量的地址或临时 : y
+D:\source\repos\c -study\base4 practice\base4 practice\main.c(152,1): warning C4716: “clstring”: 必须返回一个值
+  base4 practice.vcxproj -> D:\source\repos\c -study\base4 practice\x64\Debug\base4 practice.exe

@@ -143,6 +143,14 @@ char* charTurner(const char* rstring)
 	return c_result;
 }
 
+int clstring(char* arr)
+{
+	for (int i = 0;arr[i];i++)
+	{
+		arr[i] = 0;
+	}
+}
+
 
 int main()
 {
@@ -151,29 +159,33 @@ int main()
 	char user_input[1000] = {'\0'};
 	char test[1473] = "nihcsjodfisdjf";
 
-	printf("%s\n", test);
+	//printf("%s\n", test);
 	do
 	{
 		printf("请输入数字以选择模式，1是加密，2是解密，0是退出\n\n");
 		scanf("%d", &chioce);
+		scanf("%*c");
 		switch (chioce)
 		{
 		case 1:
 			printf("\n请输入需要加密的文字：\n\n");
-			scanf("%s", user_input);
+			scanf("%[^\n]", user_input);
 
 			printf("\n先生你的密文是：\n\n%s\n\n", base4Turner(user_input));
+			clstring(b_result);
 			break;
 		case 2:
 			printf("\n请输入需要解密的文字：\n\n");
-			scanf("%s", user_input);
+			scanf("%[^\n]", user_input);
 
 			printf("\n先生你的原文是：\n\n%s\n\n", charTurner(user_input));
+			clstring(c_result);
+
 			break;
 		default:
 			break;
 		}
-
+		clstring(user_input);
 
 	}
 
