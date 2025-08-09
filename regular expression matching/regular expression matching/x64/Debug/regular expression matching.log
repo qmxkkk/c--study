@@ -1,0 +1,4 @@
+﻿  main.c
+D:\source\repos\c -study\regular expression matching\regular expression matching\main.c(21,4): warning C4102: “restar”: 未引用的标签
+D:\source\repos\c -study\regular expression matching\regular expression matching\main.c(255,1): warning C4715: “isMatch”: 不是所有的控件路径都返回值
+  regular expression matching.vcxproj -> D:\source\repos\c -study\regular expression matching\x64\Debug\regular expression matching.exe
