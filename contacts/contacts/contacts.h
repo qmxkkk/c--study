@@ -7,6 +7,8 @@
 #include <stdlib.h>
 
 
+#define DEFALT_SZ 3
+
 #define PEOOLE_MAX 100
 #define NAME_MAX 100
 #define SEX_MAX 100
@@ -25,10 +27,19 @@ typedef struct PeoInfo
 
 }PeoInfo;
 
+//¾²Ì¬°æ±¾
+//typedef struct Contacts
+//{
+//	PeoInfo date[PEOOLE_MAX];
+//	int count;
+//}Contacts;
+
+
 typedef struct Contacts
 {
-	PeoInfo date[PEOOLE_MAX];
+	PeoInfo *date;
 	int count;
+	int capacity;
 }Contacts;
 
 enum OpNum
@@ -60,7 +71,9 @@ enum ModOpNum
 int charToInt(char* s);
 
 
-void Initdate(Contacts* pc);
+int Initdate(Contacts* pc);
+
+void DestroyContacts(Contacts* pc);
 
 void AddPeo(Contacts* pc);
 

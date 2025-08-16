@@ -50,10 +50,31 @@ int main()
 }
 
 
-void Initdate(Contacts* pc)//初始化通讯录结构体数据，使其全部变成0
+//void Initdate(Contacts* pc)//初始化通讯录结构体数据，使其全部变成0
+//{
+//	pc->count = 0;
+//	memset(pc->date, 0, sizeof(pc->date));
+//}
+
+int Initdate(Contacts* pc)//初始化通讯录结构体数据，使其全部变成0
 {
+	PeoInfo* temp = NULL;
 	pc->count = 0;
-	memset(pc->date, 0, sizeof(pc->date));
+	pc->capacity = DEFALT_SZ;
+	while (NULL == temp)
+	{
+		temp = (PeoInfo*)calloc(pc->capacity, sizeof(PeoInfo));
+	}
+	pc->date = temp;
+}
+
+
+void DestroyContacts(Contacts* pc)
+{
+	assert(pc);
+	free(pc->date);
+	pc->date = NULL;
+	pc = NULL;
 }
 
 
@@ -158,7 +179,7 @@ static int mod_MoveTO(Contacts* pc, int dis, int sou)
 
 		}
 		exchangPeo(pc, dis + 1, sou + 1, 0);
-		for (i = dis + 2;pc->count >= i;i++)
+		for (i = sou + 1;pc->count >= i;i++)
 		{
 			temp = pc->date[i].serial;
 			pc->date[i] = pc->date[i + 1];
@@ -177,7 +198,7 @@ static int mod_MoveTO(Contacts* pc, int dis, int sou)
 			pc->date[i].serial = temp;
 		}
 		exchangPeo(pc, dis - 1, sou - 1, 0);
-		for (i = sou - 2; 1 <= i;i--)
+		for (i = sou - 1; 1 <= i;i--)
 		{
 			temp = pc->date[i].serial;
 			pc->date[i] = pc->date[i - 1];
@@ -224,14 +245,67 @@ static int applySerial(Contacts* pc)
 //	}
 //}
 
+//静态版本
+//void AddPeo(Contacts* pc)
+//{
+//	assert(pc);
+//	if (PEOOLE_MAX - 1 <= pc->count)
+//	{
+//		printf("联系人数量已经达到上限，添加失败\n");
+//		return;
+//	}
+//	pc->count++;
+//	printf("添加联系人开始...\n");
+//	printf("请输入名字：\n");
+//	scanf("%s", pc->date[pc->count].name);
+//	printf("请输入年龄：\n");
+//	scanf("%d", &(pc->date[pc->count].age));
+//	printf("请输入性别：\n");
+//	scanf("%s", pc->date[pc->count].sex);
+//	printf("请输入电话：\n");
+//	scanf("%s", pc->date[pc->count].tele);
+//	printf("请输入地址：\n");
+//	scanf("%s", pc->date[pc->count].addr);
+//	pc->date[pc->count].serial = pc->count;
+//	if(1==pc->count)
+//		printSingleDate(pc, pc->count, 0);
+//	else
+//	{
+//		printSingleDate(pc, pc->count-1, 0);
+//		printSingleDate(pc, pc->count, 1);
+//
+//	}
+//	printf("联系人添加成功\n");
+//
+//
+//}
+
+void cheakCapacity(Contacts* pc)
+{
+	assert(pc);
+	PeoInfo* temp = NULL;
+	if (pc->capacity - 2 <= pc->count)
+	{
+		pc->capacity += 2;
+		while (NULL == temp)
+		{
+			temp = (PeoInfo*)realloc(pc->date, sizeof(PeoInfo) * pc->capacity);
+
+		}
+		pc->date = temp;
+
+		printf("联系人数量已经达到上限，扩容成功\n");
+
+	}
+
+}
+
+
 void AddPeo(Contacts* pc)
 {
 	assert(pc);
-	if (PEOOLE_MAX - 1 <= pc->count)
-	{
-		printf("联系人数量已经达到上限，添加失败\n");
-		return;
-	}
+	//容量检查
+	cheakCapacity(pc);
 	pc->count++;
 	printf("添加联系人开始...\n");
 	printf("请输入名字：\n");
@@ -245,11 +319,11 @@ void AddPeo(Contacts* pc)
 	printf("请输入地址：\n");
 	scanf("%s", pc->date[pc->count].addr);
 	pc->date[pc->count].serial = pc->count;
-	if(1==pc->count)
+	if (1 == pc->count)
 		printSingleDate(pc, pc->count, 0);
 	else
 	{
-		printSingleDate(pc, pc->count-1, 0);
+		printSingleDate(pc, pc->count - 1, 0);
 		printSingleDate(pc, pc->count, 1);
 
 	}
@@ -257,7 +331,6 @@ void AddPeo(Contacts* pc)
 
 
 }
-
 
 void DelPeo(Contacts* pc)
 {
