@@ -22,7 +22,8 @@ int main()
 	int input = 0;
 	Contacts con;
 	Initdate(&con);
-
+	if (!LoadContacts(&con))
+		printf("读取通讯录成功\n\n");
 	//char text[5] = "-67";
 	//int k = charToInt(text);
 	//printf("%d\n", k);
@@ -41,11 +42,14 @@ int main()
 			printf("输入有误，请重新输入正确的操作数字：\n");
 			continue;
 		}
-		else if(!input)
-			return 0;
-		else
+		else if (1 <= input && 6 >= input)
 			ContactsOp[input](&con);
 	} while (input);
+	
+	if (!SaveContacts(&con))
+		printf("通讯录保存成功\n");
+	DestroyContacts(&con);
+	printf("退出成功\n");
 	return 0;
 }
 
@@ -78,7 +82,7 @@ void DestroyContacts(Contacts* pc)
 }
 
 
-static void printSingleDate(Contacts* pc, int i,int header)//打印指定下标 i 的联系人数据，header 为0打印表头，否则不打印表头
+static void printSingleDate(Contacts* pc, const int i, const int header)//打印指定下标 i 的联系人数据，header 为0打印表头，否则不打印表头
 {
 	assert(pc);
 	if (0 > i || pc->count < i)
@@ -97,10 +101,23 @@ static void printSingleDate(Contacts* pc, int i,int header)//打印指定下标 i 的联
 }
 
 
-static int findPeo(Contacts* pc,char *c)
+static int findPeo(Contacts* pc, char *c)
 {
 	assert(pc);
 	char* arr[5] = { "name","age","sex","tele","addr" };
+	int log = 0;
+	
+	//for (int k = 0;k < NAME_MAX -1;k++)
+	//{
+	//	if ('\0' == c[k])
+	//		log = 1;
+	//	if (1 == log)
+	//	{
+	//		c[k] = ' ';
+	//	}
+
+	//}
+	c[NAME_MAX - 1] = '\0';
 	for (int i = 1;i <= pc->count;i++)
 	{
 		if (strcmp(c, pc->date[i].name) == 0)
@@ -136,14 +153,14 @@ int charToInt(char* s)
 	return ret;
 }
 
-static int indexIsLegal(Contacts* pc, int i)
+static int indexIsLegal(Contacts* pc, const int i)
 {
 	if (0 < i && pc->count > i)
 		return 1;
 	return 0;
 }
 
-static int exchangPeo(Contacts* pc, int dis, int sou,int ser)
+static int exchangPeo(Contacts* pc, const int dis, const int sou, const int ser)
 {
 	assert(pc);
 	if (0 > dis || 0 > sou || pc->count + 1 < dis || pc->count + 1 < sou)
@@ -153,21 +170,26 @@ static int exchangPeo(Contacts* pc, int dis, int sou,int ser)
 	pc->date[sou] = pc->date[dis];
 	pc->date[dis] = temp;
 	int k = 0;
-	if(!ser)//ser==1时则交换序号
-	k = pc->date[sou].serial;
+	if (!ser)//ser==1时则交换序号
+		k = pc->date[sou].serial;
 	pc->date[sou].serial = pc->date[dis].serial;
 	pc->date[dis].serial = k;
 	return 0;
 
 }
 
-static int mod_MoveTO(Contacts* pc, int dis, int sou)
+static int mod_MoveTO(Contacts* pc, const int dis, const int sou)
 {
 	assert(pc);
 	if (0 >= dis || 0 >= sou || pc->count < dis || pc->count < sou)
 		return -1;
 	int temp = 0;
-	if (dis < sou)
+	if (1 == dis - sou || -1 == dis - sou)
+	{
+		exchangPeo(pc, dis, sou, 0);
+		return 0;
+	}
+	else if (dis < sou)
 	{
 		exchangPeo(pc, dis, sou, 0);
 		int i = pc->count;
@@ -205,6 +227,7 @@ static int mod_MoveTO(Contacts* pc, int dis, int sou)
 			pc->date[i].serial = temp;
 		}
 	}
+	return 0;
 
 
 }
@@ -280,6 +303,7 @@ static int applySerial(Contacts* pc)
 //
 //}
 
+
 void cheakCapacity(Contacts* pc)
 {
 	assert(pc);
@@ -300,6 +324,87 @@ void cheakCapacity(Contacts* pc)
 
 }
 
+int LoadContacts(Contacts* pc)
+{
+	//打开文件
+	FILE* pread = fopen("Save.txt", "r");
+	while (NULL == pread)
+	{
+		if (2 == errno)
+		{
+			//建立新的Save.txt
+			FILE * pwrite = fopen("Save.txt", "w");
+			while (NULL == pwrite)
+			{
+				pwrite = fopen("Save.txt", "w");
+			}
+			fclose(pwrite);
+			pwrite = NULL;
+		}
+		pread = fopen("Save.txt", "r");
+	}
+	//操作
+	char temp[6] = { 0 };
+	char temp2[30] = { 0 };
+	fscanf(pread, "%*[a-zA-z=] %[0-9] %*[a-zA-z=] %[0-9]\n", temp, temp2);
+	pc->count = charToInt(temp);
+	//扩容
+	cheakCapacity(pc);
+
+	fscanf(pread, "%*[^\n]");
+	for (int i = 1;i <= pc->count;i++)
+	{
+		fscanf(pread, " %d %*[/] %[^/] %*[/] %d %*[/] %[^/] %*[/] %[^/]  %*[/] %[^/] %*[/]",
+			&(pc->date[i].serial),
+			pc->date[i].name,
+			&(pc->date[i].age),
+			pc->date[i].sex,
+			pc->date[i].tele,
+			pc->date[i].addr);
+	}
+
+	//关闭文件
+	fclose(pread);
+	pread = NULL;
+	return 0;
+}
+
+
+int SaveContacts(const Contacts* pc)
+{
+	//打开文件
+	FILE* pwrite = fopen("Save.txt", "w");
+	while (NULL == pwrite)
+	{
+		pwrite = fopen("Save.txt", "w");
+	}
+	//保存数据
+	fprintf(pwrite, "Count=%d Capacity=%d\n", pc->count, pc->capacity);
+	fprintf(pwrite, "%3s\t%10s\t%3s\t%4s\t%8s\t%20s\n", "序号", "姓名", "年龄", "性别", "电话", "地址");
+
+	for (int i = 1;i <= pc->count;i++)
+	{
+		fprintf(pwrite, "%3d/\t%10s/\t%3d/\t%4s/\t%15s/\t%20s/\n", 
+			pc->date[i].serial,
+			pc->date[i].name,
+			pc->date[i].age,
+			pc->date[i].sex,
+			pc->date[i].tele,
+			pc->date[i].addr);
+
+	}
+
+	//关闭文件
+	fclose(pwrite);
+	pwrite = NULL;
+	return 0;
+}
+
+
+
+
+
+
 
 void AddPeo(Contacts* pc)
 {
@@ -309,15 +414,15 @@ void AddPeo(Contacts* pc)
 	pc->count++;
 	printf("添加联系人开始...\n");
 	printf("请输入名字：\n");
-	scanf("%s", pc->date[pc->count].name);
+	scanf(" %[^\n]", pc->date[pc->count].name);
 	printf("请输入年龄：\n");
 	scanf("%d", &(pc->date[pc->count].age));
 	printf("请输入性别：\n");
-	scanf("%s", pc->date[pc->count].sex);
+	scanf(" %[^\n]", pc->date[pc->count].sex);
 	printf("请输入电话：\n");
-	scanf("%s", pc->date[pc->count].tele);
+	scanf(" %[^\n]", pc->date[pc->count].tele);
 	printf("请输入地址：\n");
-	scanf("%s", pc->date[pc->count].addr);
+	scanf(" %[^\n]", pc->date[pc->count].addr);
 	pc->date[pc->count].serial = pc->count;
 	if (1 == pc->count)
 		printSingleDate(pc, pc->count, 0);
@@ -337,7 +442,8 @@ void DelPeo(Contacts* pc)
 	assert(pc);
 	char input[NAME_MAX] = { 0 };
 	printf("请输入想删除的了联系人的名字：\n");
-	scanf("%s", input);
+	scanf("%*[^\n]");scanf("%*c");
+	scanf("%[^\n]", input);
 	int i = findPeo(pc, input);
 	if (-1 == i)
 	{
@@ -359,7 +465,8 @@ void SearchPeo(Contacts* pc)
 	assert(pc);
 	char input[NAME_MAX] = { 0 };
 	printf("请输入想要查找的联系人的名字:\n");
-	scanf("%s", input);
+	scanf("%*[^\n]");scanf("%*c");
+	scanf("%[^\n]", input);
 	int i = findPeo(pc, input);
 	if (-1 == i)
 	{
@@ -376,8 +483,8 @@ void ModDate(Contacts* pc)
 	assert(pc);
 	char input[NAME_MAX] = { 0 };
 	printf("请输入要操作的联系人的名字：\n");
-
-	scanf("%s", input);
+	scanf("%*[^\n]");scanf("%*c");
+	scanf("%[^\n]", input);
 	int i = findPeo(pc, input);
 	if (-1 == i)
 	{
@@ -402,7 +509,9 @@ void ModDate(Contacts* pc)
 		if (opNum)
 		{
 			printf("请输入修改后内容(移动与交换是输入序号)：\n");
-			scanf("%s", input);
+
+			scanf("%*[^\n]");scanf("%*c");
+			scanf("%[^\n]", input);
 		}
 		
 
@@ -419,7 +528,7 @@ void ModDate(Contacts* pc)
 			for (;0 > input && pc->count < input;)
 			{
 				printf("输入序号超出范围，请重新输入\n");
-				scanf("%d", &input);
+				scanf("%s", &input);
 			}
 			mod_MoveTO(pc, charToInt(input), i);
 			printSingleDate(pc, i, 0);
@@ -433,7 +542,7 @@ void ModDate(Contacts* pc)
 			for (;0 > input && pc->count < input;)
 			{
 				printf("输入序号超出范围，请重新输入\n");
-				scanf("%d", &input);
+				scanf("%s", &input);
 			}
 			exchangPeo(pc, charToInt(input), i, 0);
 			printSingleDate(pc, i, 0);
@@ -468,6 +577,7 @@ void ModDate(Contacts* pc)
 			break;
 		case MOD_EXIT:
 			printf("已退出修改模式\n\n");
+			break;
 		default:
 			printf("输入数字未找到相关操作，请重新输入\n");
 			break;

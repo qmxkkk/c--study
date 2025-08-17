@@ -10,20 +10,20 @@
 #define DEFALT_SZ 3
 
 #define PEOOLE_MAX 100
-#define NAME_MAX 100
-#define SEX_MAX 100
-#define TELE_MAX 100
-#define ADDR_MAX 100
-#define PEOOLE_MAX 100
+#define NAME_MAX 20
+#define SEX_MAX 12
+#define TELE_MAX 16
+#define ADDR_MAX 28
+
 
 typedef struct PeoInfo
 {
 	int serial;
-	char name[20];
+	char name[NAME_MAX];
 	int age;
-	char sex[12];
-	char tele[16];
-	char addr[28];
+	char sex[SEX_MAX];
+	char tele[TELE_MAX];
+	char addr[ADDR_MAX];
 
 }PeoInfo;
 
@@ -69,6 +69,11 @@ enum ModOpNum
 
 
 int charToInt(char* s);
+
+int LoadContacts(Contacts* pc);
+
+
+int SaveContacts(const Contacts* pc);
 
 
 int Initdate(Contacts* pc);

@@ -1,14 +1,5 @@
 ﻿  test.c
-D:\source\repos\c -study\contacts\contacts\test.c(419,33): warning C4047: “<”:“int”与“char [100]”的间接级别不同
-D:\source\repos\c -study\contacts\contacts\test.c(422,11): warning C4477: “scanf”: 格式字符串“%d”需要类型“int *”的参数，但可变参数 1 拥有了类型“char (*)[100]”
-      D:\source\repos\c -study\contacts\contacts\test.c(422,11):
-      请考虑在格式字符串中使用“%hhd”
-  
-D:\source\repos\c -study\contacts\contacts\test.c(433,33): warning C4047: “<”:“int”与“char [100]”的间接级别不同
-D:\source\repos\c -study\contacts\contacts\test.c(436,11): warning C4477: “scanf”: 格式字符串“%d”需要类型“int *”的参数，但可变参数 1 拥有了类型“char (*)[100]”
-      D:\source\repos\c -study\contacts\contacts\test.c(436,11):
-      请考虑在格式字符串中使用“%hhd”
-  
-D:\source\repos\c -study\contacts\contacts\test.c(69,1): warning C4716: “Initdate”: 必须返回一个值
-D:\source\repos\c -study\contacts\contacts\test.c(210,1): warning C4715: “mod_MoveTO”: 不是所有的控件路径都返回值
+D:\source\repos\c -study\contacts\contacts\test.c(517,33): warning C4047: “<”:“int”与“char [20]”的间接级别不同
+D:\source\repos\c -study\contacts\contacts\test.c(531,33): warning C4047: “<”:“int”与“char [20]”的间接级别不同
+D:\source\repos\c -study\contacts\contacts\test.c(73,1): warning C4716: “Initdate”: 必须返回一个值
   contacts.vcxproj -> D:\source\repos\c -study\contacts\x64\Debug\contacts.exe

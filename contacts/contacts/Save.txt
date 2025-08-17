@@ -1,0 +1,5 @@
+Count=3 Capacity=5
+序号	      姓名	年龄	性别	    电话	                地址
+  1/	     jdi k/	 23/	 kdi/	        nofiejf/	             niefekf/
+  2/	  juju bao/	  1/	   1/	              1/	                   1/
+  3/	       s b/	  1/	   1/	              1/	                  11/
