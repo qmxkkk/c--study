@@ -91,8 +91,8 @@ static void printSingleDate(Contacts* pc, const int i, const int header)//打印指
 		return;
 	}
 	if(!header)
-		printf("%-3s\t%-10s\t%-3s\t%-4s\t%-15s\t%-20s\n","序号", "姓名", "年龄", "性别", "电话", "地址");
-	printf("%-3d\t%-10s\t%-3d\t%-4s\t%-15s\t%-20s\n",pc->date[i].serial,
+		printf("%-3s\t%-10s\t%-3s\t%-4s\t%-15s\t%-20s\n\n","序号", "姓名", "年龄", "性别", "电话", "地址");
+	printf("%-3d\t%-10s\t%-3d\t%-4s\t%-15s\t%-20s\n\n",pc->date[i].serial,
 												 	pc->date[i].name,
 													pc->date[i].age,
 													pc->date[i].sex,
@@ -338,8 +338,17 @@ int LoadContacts(Contacts* pc)
 			{
 				pwrite = fopen("Save.txt", "w");
 			}
+			//写入默认数据
+			fprintf(pwrite, "Count=%d Capacity=%d\n", 3, 5);
+			fprintf(pwrite, "%3s\t%10s\t%3s\t%4s\t%8s\t%20s\n", "序号", "姓名", "年龄", "性别", "电话", "地址");
+			fprintf(pwrite, "%3d/\t%10s/\t%3d/\t%4s/\t%15s/\t%20s/\n", 1, "天童-爱丽丝", 0, "没有B~", "卧槽，盒！！", "千年学园游戏开发部");
+			fprintf(pwrite, "%3d/\t%10s/\t%3d/\t%4s/\t%15s/\t%20s/\n", 2, "游戏-王小桃", 15, "女", "negar~~", "千年学园游戏开发部");
+			fprintf(pwrite, "%3d/\t%10s/\t%3d/\t%4s/\t%15s/\t%20s/\n", 3, "田所浩二", 24, "先辈", "1145141919810", "东京都世田谷区北泽3-23-14");
+
 			fclose(pwrite);
 			pwrite = NULL;
+			
+			printf("\n成功载入默认联系人,请输入数字5查看哟~\n\n");
 		}
 		pread = fopen("Save.txt", "r");
 	}
@@ -603,6 +612,7 @@ void ShowDate(Contacts* pc)
 	for (int i = 1;i <= pc->count;i++)
 	{
 		printSingleDate(pc, i, i-1);
+		printf("\n");
 	}
 	printf("显示成功\n\n");
 }

@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{7645FE02-5702-4A15-A2DF-08C6E100E536}|contacts\\contacts.vcxproj|D:\\source\\repos\\c -study\\contacts\\contacts\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7645FE02-5702-4A15-A2DF-08C6E100E536}|contacts\\contacts.vcxproj|solutionrelative:contacts\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7645FE02-5702-4A15-A2DF-08C6E100E536}|contacts\\contacts.vcxproj|D:\\source\\repos\\c -study\\contacts\\contacts\\contacts.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7645FE02-5702-4A15-A2DF-08C6E100E536}|contacts\\contacts.vcxproj|solutionrelative:contacts\\contacts.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,13 +30,25 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "contacts.h",
+              "DocumentMoniker": "D:\\source\\repos\\c -study\\contacts\\contacts\\contacts.h",
+              "RelativeDocumentMoniker": "contacts\\contacts.h",
+              "ToolTip": "D:\\source\\repos\\c -study\\contacts\\contacts\\contacts.h",
+              "RelativeToolTip": "contacts\\contacts.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-18T14:14:47.607Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "test.c",
               "DocumentMoniker": "D:\\source\\repos\\c -study\\contacts\\contacts\\test.c",
               "RelativeDocumentMoniker": "contacts\\test.c",
               "ToolTip": "D:\\source\\repos\\c -study\\contacts\\contacts\\test.c",
               "RelativeToolTip": "contacts\\test.c",
-              "ViewState": "AgIAADgBAAAAAAAAAAAnwFQBAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAcCAAAAAAAAAAAnwGkCAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-08-17T07:07:25.59Z",
               "EditorCaption": ""
