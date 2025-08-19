@@ -1,4 +1,5 @@
 ﻿  kimi.c
   test.c
   正在生成代码...
-  schur.vcxproj -> C:\Users\kiana\source\repos\schur\x64\Debug\schur.exe
+  LINK : 没有找到 D:\source\repos\c -study\schur\x64\Debug\schur.exe 或上一个增量链接没有生成它；正在执行完全链接
+  schur.vcxproj -> D:\source\repos\c -study\schur\x64\Debug\schur.exe

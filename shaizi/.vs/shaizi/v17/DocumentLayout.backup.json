@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kiana\\source\\repos\\shaizi\\",
+  "WorkspaceRootPath": "D:\\source\\repos\\c -study\\shaizi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{731EF4B5-1213-4D2E-9F82-86E6D3AADFCE}|shaizi\\shaizi.vcxproj|C:\\Users\\kiana\\source\\repos\\shaizi\\shaizi\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{731EF4B5-1213-4D2E-9F82-86E6D3AADFCE}|shaizi\\shaizi.vcxproj|D:\\source\\repos\\c -study\\shaizi\\shaizi\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{731EF4B5-1213-4D2E-9F82-86E6D3AADFCE}|shaizi\\shaizi.vcxproj|solutionrelative:shaizi\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -14,15 +14,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "test.c",
-              "DocumentMoniker": "C:\\Users\\kiana\\source\\repos\\shaizi\\shaizi\\test.c",
+              "DocumentMoniker": "D:\\source\\repos\\c -study\\shaizi\\shaizi\\test.c",
               "RelativeDocumentMoniker": "shaizi\\test.c",
-              "ToolTip": "C:\\Users\\kiana\\source\\repos\\shaizi\\shaizi\\test.c",
+              "ToolTip": "D:\\source\\repos\\c -study\\shaizi\\shaizi\\test.c",
               "RelativeToolTip": "shaizi\\test.c",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",

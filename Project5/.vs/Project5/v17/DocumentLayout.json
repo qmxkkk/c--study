@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kiana\\source\\repos\\Project5\\",
+  "WorkspaceRootPath": "D:\\source\\repos\\c -study\\Project5\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F1795B48-E645-45D8-AC21-0F33C2E3B5B7}|Project5\\Project5.vcxproj|C:\\Users\\kiana\\source\\repos\\Project5\\Project5\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{F1795B48-E645-45D8-AC21-0F33C2E3B5B7}|Project5\\Project5.vcxproj|D:\\source\\repos\\c -study\\Project5\\Project5\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F1795B48-E645-45D8-AC21-0F33C2E3B5B7}|Project5\\Project5.vcxproj|solutionrelative:Project5\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -14,17 +14,25 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "test.c",
-              "DocumentMoniker": "C:\\Users\\kiana\\source\\repos\\Project5\\Project5\\test.c",
+              "DocumentMoniker": "D:\\source\\repos\\c -study\\Project5\\Project5\\test.c",
               "RelativeDocumentMoniker": "Project5\\test.c",
-              "ToolTip": "C:\\Users\\kiana\\source\\repos\\Project5\\Project5\\test.c",
+              "ToolTip": "D:\\source\\repos\\c -study\\Project5\\Project5\\test.c",
               "RelativeToolTip": "Project5\\test.c",
-              "ViewState": "AgIAABwAAAAAAAAAAAAAAGEAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-12-25T09:15:01.501Z",
               "EditorCaption": ""

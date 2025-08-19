@@ -1,3 +1,4 @@
 ﻿  text.c
-C:\Users\kiana\source\repos\gailv yanzheng\gailv yanzheng\text.c(9,22): warning C4013: “time”未定义；假设外部返回 int
-  gailv yanzheng.vcxproj -> C:\Users\kiana\source\repos\gailv yanzheng\x64\Debug\gailv yanzheng.exe
+D:\source\repos\c -study\gailv yanzheng\gailv yanzheng\text.c(9,22): warning C4013: “time”未定义；假设外部返回 int
+  LINK : 没有找到 D:\source\repos\c -study\gailv yanzheng\x64\Debug\gailv yanzheng.exe 或上一个增量链接没有生成它；正在执行完全链接
+  gailv yanzheng.vcxproj -> D:\source\repos\c -study\gailv yanzheng\x64\Debug\gailv yanzheng.exe

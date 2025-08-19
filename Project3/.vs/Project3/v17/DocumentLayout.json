@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kiana\\source\\repos\\Project3\\",
+  "WorkspaceRootPath": "D:\\source\\repos\\c -study\\Project3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0BCF5D68-726E-410C-870A-B05E7860B379}|Project3\\Project3.vcxproj|C:\\Users\\kiana\\source\\repos\\Project3\\Project3\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{0BCF5D68-726E-410C-870A-B05E7860B379}|Project3\\Project3.vcxproj|D:\\source\\repos\\c -study\\Project3\\Project3\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0BCF5D68-726E-410C-870A-B05E7860B379}|Project3\\Project3.vcxproj|solutionrelative:Project3\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
@@ -17,14 +17,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "math.h",
               "DocumentMoniker": "D:\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\math.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\math.h",
               "ToolTip": "D:\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\math.h",
+              "RelativeToolTip": "..\\..\\..\\..\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\math.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-11-16T09:07:51.97Z"
@@ -33,11 +43,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "test.c",
-              "DocumentMoniker": "C:\\Users\\kiana\\source\\repos\\Project3\\Project3\\test.c",
+              "DocumentMoniker": "D:\\source\\repos\\c -study\\Project3\\Project3\\test.c",
               "RelativeDocumentMoniker": "Project3\\test.c",
-              "ToolTip": "C:\\Users\\kiana\\source\\repos\\Project3\\Project3\\test.c",
+              "ToolTip": "D:\\source\\repos\\c -study\\Project3\\Project3\\test.c",
               "RelativeToolTip": "Project3\\test.c",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-10-14T05:43:53.244Z",
               "EditorCaption": ""
