@@ -1,0 +1,3 @@
+﻿  main.c
+D:\source\repos\c -study\add-two-numbers\add-two-numbers\main.c(64,22): warning C4047: “初始化”:“ListNode *”与“ListNode **”的间接级别不同
+  add-two-numbers.vcxproj -> D:\source\repos\c -study\add-two-numbers\add-two-numbers\x64\Debug\add-two-numbers.exe
